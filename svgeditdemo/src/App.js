@@ -6,11 +6,15 @@ import { SvgEditDemo } from "./svgedit-demo";
 
 function App() {
   return (
+
+
+
+    
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
       <ButtonCounter></ButtonCounter>
-
       <hr />
+      
       <SvgEditDemo></SvgEditDemo>
     </div>
   );
