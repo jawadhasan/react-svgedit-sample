@@ -10,6 +10,10 @@ export function SvgEditDemo() {
 
   const [counter, setCounter] = useState(0);
 
+  const [RectMove, setRectMove] = useState();
+  const [RectObj, setRectObj] = useState();
+  const [CircObj, setCircObj] = useState();
+  
   const [tool, setTool] = useState("circ");
   const [objects, setObjects] = useState([]);
   const svgRef = useRef(0);
@@ -41,9 +45,7 @@ export function SvgEditDemo() {
     console.log("onMouseDown", obj);
   };
 
-  const onMouseUp = (obj) => {
-    console.log("onMouseDown", obj);
-  };
+
 
   const renderCirc = (obj) => {
     return (
@@ -65,9 +67,22 @@ export function SvgEditDemo() {
   };
 
   const handleSelectTool = (tool) => {
-    console.log("tool", tool);
+    console.log("tool selected", tool);
     setTool(tool);
   };
+
+  const handleMouseUp = (e) =>{
+
+    setRectMove(null);
+    setRectObj(null);
+    setCircObj(null);
+ 
+  }
+
+
+
+
+  
 
   return (
     <div className="canvas">
@@ -91,7 +106,7 @@ export function SvgEditDemo() {
         className={`tool--${tool} svg`}
         ref={svgRef}
         onMouseDown={onMouseDown}
-        onMouseUp={onMouseUp}
+        onMouseUp={handleMouseUp}
       >
         {renderCirc({ id: 1, cx: 100, cy: 200, rx: 50, ry: 50, color: "red" })}
         {renderCirc({ id: 2, cx: 200, cy: 100, rx: 30, ry: 30, color: "blue" })}
