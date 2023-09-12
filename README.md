@@ -1,7 +1,7 @@
 
 
 
-# svgeditapp demo
+# svgeditdemo
 
 Simple usage of canvas lib with react.
 
@@ -13,7 +13,7 @@ A simple guide.
 ### create app
 
 ```
-npx create-react-app svgeditapp
+npx create-react-app svgeditdemo
 ```
 
 
@@ -26,7 +26,8 @@ npm ci
 
 Run development server
 ```
-npm run dev
+npm start
+
 ```
 
 Build Project
