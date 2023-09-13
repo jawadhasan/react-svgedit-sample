@@ -4,7 +4,7 @@ import SvgCanvas from "@svgedit/svgcanvas";
 
 export function SvgEditDemo() {
   useEffect(() => {
-    initSvgCanvas();
+    //initSvgCanvas();
     // renderCirc();
   }, []);
 
